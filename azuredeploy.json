@@ -155,19 +155,6 @@
            "description": "byol = Bring Your Own License; bundle1 = Bundle 1 PAYG (Hourly); bundle2 = Bundle 2 PAYG (Hourly)"
        }
     },
-      "imageVersion": {
-      "defaultValue": "7.1.1",
-      "allowedValues": [
-          "latest",
-          "8.1.0",
-          "8.0.0",
-          "7.1.1"
-      ],
-      "type": "String",
-      "metadata": {
-          "description": "PAN OS Version"
-      }
-  },
     "firewallVmName": {
        "type": "string",
        "metadata": {
@@ -406,9 +393,6 @@
           },
           "vmSize": {
                "value": "[parameters('firewallVmSize')]"
-          },
-          "version": {
-            "value": "[parameters('imageVersion')]"
           },
           "virtualNetworkName": {
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
