@@ -50,6 +50,19 @@
        },
        "defaultValue": "byol"
     },
+    "imageVersion": {
+      "defaultValue": "latest",
+      "allowedValues": [
+          "latest",
+          "8.1.0",
+          "8.0.0",
+          "7.1.0"
+      ],
+      "type": "String",
+      "metadata": {
+          "description": "PAN OS Version"
+      }
+  },
     "virtualNetworkName": { 
       "type": "string",
       "metadata": {
@@ -355,6 +368,9 @@
           },
           "imageOffer": {
             "value": "[variables('imageOffer')]"
+          },
+          "version": {
+            "value": "[parameters('imageVersion')]"
           },
           "imagePublisher": {
             "value": "[variables('imagePublisher')]"
