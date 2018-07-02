@@ -51,12 +51,12 @@
        "defaultValue": "byol"
     },
     "imageVersion": {
-      "defaultValue": "7.1.0",
+      "defaultValue": "7.1.1",
       "allowedValues": [
           "latest",
           "8.1.0",
           "8.0.0",
-          "7.1.0"
+          "7.1.1"
       ],
       "type": "String",
       "metadata": {
@@ -239,7 +239,7 @@
     "rgname": "[resourceGroup().id]",
     "imagePublisher": "paloaltonetworks",
     "imageOffer" : "vmseries1",
-    "version" : "7.1.0",
+    "version" : "7.1.1",
     "nicName": "[parameters('vmName')]",
     "publicIPAddressType": "Dynamic",
     "nsgSetupURL" : "[concat(parameters('baseUrl'),'/nsg-new.json')]",
