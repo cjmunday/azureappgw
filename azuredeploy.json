@@ -155,6 +155,19 @@
            "description": "byol = Bring Your Own License; bundle1 = Bundle 1 PAYG (Hourly); bundle2 = Bundle 2 PAYG (Hourly)"
        }
     },
+      "imageVersion": {
+      "defaultValue": "latest",
+      "allowedValues": [
+          "latest",
+          "8.1.0",
+          "8.0.0",
+          "7.1.0"
+      ],
+      "type": "String",
+      "metadata": {
+          "description": "PAN OS Version"
+      }
+  },
     "firewallVmName": {
        "type": "string",
        "metadata": {
@@ -251,7 +264,7 @@
     "rgname" : "[resourceGroup().name]",
     "LoadBalancerType" : "layer-7",
     "firewallVmCount" : 2,
-    "baseUrl" : "https://raw.githubusercontent.com/PaloAltoNetworks/azure-applicationgateway/master/",
+    "baseUrl" : "https://raw.githubusercontent.com/cjmunday/azureappgw/master/",
     "nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
     "vnetURL" : "[concat(variables('baseUrl'),'/vnet-', parameters('virtualNetworkNewOrExisting'),'.json')]",
     "publicLBURL" : "[concat(variables('baseUrl'),'/public-lb-', variables('LoadBalancerType'), '.json')]",
@@ -393,6 +406,9 @@
           },
           "vmSize": {
                "value": "[parameters('firewallVmSize')]"
+          },
+          "version": {
+            "value": "[parameters('imageVersion')]"
           },
           "virtualNetworkName": {
                "value": "[reference('SetupVNET').outputs.vnetName.value]"
