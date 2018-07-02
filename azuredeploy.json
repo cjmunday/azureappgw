@@ -156,12 +156,12 @@
        }
     },
       "imageVersion": {
-      "defaultValue": "7.1.0",
+      "defaultValue": "7.1.1",
       "allowedValues": [
           "latest",
           "8.1.0",
           "8.0.0",
-          "7.1.0"
+          "7.1.1"
       ],
       "type": "String",
       "metadata": {
